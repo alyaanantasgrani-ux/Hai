@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- VIEWPORT (cukup SATU) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Untuk Kamu</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- EFEK -->
+  <div class="particles"></div>
+  <div class="hearts"></div>
+
+  <!-- MUSIC -->
+  <audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- PAGE 0 -->
+  <section class="page active bg-opening">
+    <h1>Halo Cantikku</h1>
+    <p>
+      Ini bukan sekadar halaman.<br>
+      Ini adalah perasaan yang aku susun<br>
+      dengan tenang dan sepenuh hati.<br>
+      Butuh effort nih eheh 🤍
+    </p>
+    <button class="primary" onclick="start()">Klik ya</button>
+  </section>
+
+  <!-- PAGE 1 : MENU -->
+  <section class="page bg-menu">
+    <h1>Ga Boleh Pilih Sembarangan</h1>
+    <p>
+      Pilihnya harus urut ya sayangku,<br>
+      Ga usah ngeyel, nanti ga kebuka 😌
+    </p>
+
+    <button data-step="1" onclick="go(2)">Kita</button>
+    <button data-step="2" onclick="go(3)" disabled>Sayang</button>
+    <button data-step="3" onclick="go(4)" disabled>Belum selesai</button>
+    <button data-step="4" onclick="go(5)" disabled>Apaa ya ini</button>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page bg-kita">
+    <h1>Kita</h1>
+    <p>
+      Lucu ya kita tuh,<br>
+      sering berantem tapi abis itu baikan lagi.<br><br>
+
+      Banyak momen yang udah kita lewatin,<br>
+      aku, kamu, dan kota ini.<br><br>
+
+      Tetap sama aku ya,<br>
+      sampai nanti pada akhirnya kita<br>
+      menjalani hidup masing-masing.
+    </p>
+    <button onclick="finishPage(1)">Balik ya</button>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page bg-sayang">
+    <h1>Sayang</h1>
+    <p>
+      Sayang, tolong libatkan aku dalam hidupmu ya.<br>
+      Repotkan aku di setiap perjalananmu.<br><br>
+
+      Percaya ya sayang,<br>
+      aku usahain buat kamu bahagia terus,<br>
+      dan selalu bikin kamu tersenyum.<br><br>
+
+      Love you sayang 🤍
+    </p>
+    <button onclick="finishPage(2)">Balik ya</button>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page bg-final">
+    <h1>Love you sayang</h1>
+    <p>
+      Kota yang dulu terasa sunyi,<br>
+      sekarang hidup kembali.<br><br>
+
+      Terima kasih sudah hadir<br>
+      di setiap detik perjalanan hidup ini.<br><br>
+
+      Jaga hubungan ini baik-baik ya 🤍
+    </p>
+    <footer>— Dari aku</footer>
+    <button onclick="finishPage(3)">Balik ya</button>
+  </section>
+
+  <!-- PAGE 5 : GALLERY -->
+  <section class="page gallery-page bg-gallery">
+    <h1>Anjay Foto Siapa Nih</h1>
+
+    <div class="gallery">
+      <div class="frame"><img src="image/foto1.jpg" alt="Kenangan 1"></div>
+      <div class="frame"><img src="image/foto2.jpg" alt="Kenangan 2"></div>
+      <div class="frame"><img src="image/foto3.jpg" alt="Kenangan 3"></div>
+      <div class="frame"><img src="image/foto4.jpg" alt="Kenangan 4"></div>
+    </div>
+
+    <button onclick="go(6)">Pelan-pelan ya</button>
+  </section>
+
+  <!-- PAGE 6 : PENUTUP -->
+  <section class="page closing-page bg-closing">
+    <h1>Terima kasih sudah sampai di titik ini</h1>
+
+    <p>
+      Maaf ya sayang,<br>
+      masih banyak hal yang belum aku pahami.<br><br>
+
+      Maaf untuk hal-hal kecil<br>
+      yang kadang bikin kamu capek dan jenuh.
+    </p>
+
+    <p class="soft">
+      Aku sayang sama kamu.<br>
+      Love you, cantikku 🤍
+    </p>
+
+    <button class="back-home" onclick="go(1)">
+      Kembali ke awal
+    </button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
